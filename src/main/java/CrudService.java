@@ -23,6 +23,7 @@ public class CrudService {
         int korScore;
         int engScore;
         int mathScore;
+        int sciScore;
         String grade;
         String regDate;
 
@@ -42,7 +43,10 @@ public class CrudService {
             System.out.println("수학 성적 입력");
             mathScore = Integer.parseInt(br.readLine());
             dataMap.put("MATH_SCORE" , mathScore);
-            grade = Person.calculateGrade(korScore, engScore, mathScore);
+            System.out.println("과학 성적 입력");
+            sciScore = Integer.parseInt(br.readLine());
+            dataMap.put("SCI_SCORE" , sciScore);
+            grade = Person.calculateGrade(korScore, engScore, mathScore, sciScore);
             dataMap.put("GRADE" , grade);
         } catch (IOException e) {
             e.printStackTrace();
@@ -64,6 +68,7 @@ public class CrudService {
         int korScore;
         int engScore;
         int mathScore;
+        int sciScore;
         String grade;
         String regDate;
 
@@ -91,7 +96,11 @@ public class CrudService {
             mathScore = Integer.parseInt(br.readLine());
             updateMap.put("MATH_SCORE" , mathScore);
 
-            grade = Person.calculateGrade(korScore, engScore, mathScore);
+            System.out.println("과학 성적 입력");
+            sciScore = Integer.parseInt(br.readLine());
+            updateMap.put("SCI_SCORE" , sciScore);
+
+            grade = Person.calculateGrade(korScore, engScore, mathScore, sciScore);
             updateMap.put("GRADE" , grade);
 
             LocalDate date = LocalDate.now();

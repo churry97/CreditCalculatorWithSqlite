@@ -4,26 +4,28 @@ public class Person {
     private int korScore;
     private int engScore;
     private int mathScore;
+    private int sciScore;
     private String grade;
     private String regDate;
 
-    public Person(int num, String name, int korScore, int engScore, int mathScore, String grade, String regDate) {
+    public Person(int num, String name, int korScore, int engScore, int mathScore, int sciScore, String grade, String regDate) {
         this.num = num;
         this.name = name;
         this.korScore = korScore;
         this.engScore = engScore;
         this.mathScore = mathScore;
+        this.sciScore = sciScore;
         this.grade = grade;
         this.regDate = regDate;
     }
 
     private int sum(){
-        return this.korScore + this.engScore + this.mathScore;
+        return this.korScore + this.engScore + this.mathScore + this.sciScore;
     }
 
-    public static String calculateGrade(int korScore, int engScore, int mathScore){
-        int sum = korScore + engScore + mathScore;
-        double avg = sum / 3;
+    public static String calculateGrade(int korScore, int engScore, int mathScore, int sciScore){
+        int sum = korScore + engScore + mathScore + sciScore;
+        double avg = sum / 4;
 
         if(avg >= 95){
             return "A+";
@@ -48,7 +50,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.num+1 + ". " + this.name + " " +  this.korScore + "  " + this.engScore + "  " + this.mathScore + "   " + sum() + "  " + sum()/3 + "   "  + this.grade + "     "  +this.regDate ;
+        return this.num+1 + ". " + this.name + " " +  this.korScore + "  " + this.engScore + "  " + this.mathScore + "   " + this.sciScore + "   " + sum() + "  " + sum()/3 + "   "  + this.grade + "     "  +this.regDate ;
     }
 
     public int getNum() {
@@ -90,6 +92,12 @@ public class Person {
     public void setMathScore(int mathScore) {
         this.mathScore = mathScore;
     }
+
+    public int getSciScore() {
+        return sciScore;
+    }
+
+    public void setSciScore(int engScore) { this.sciScore = sciScore; }
 
     public String getRegDate() {
         return regDate;
