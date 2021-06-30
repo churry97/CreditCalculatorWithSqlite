@@ -15,11 +15,3 @@
 
 5. Update 쿼리로 수정
 <img width="1144" alt="image" src="https://user-images.githubusercontent.com/63008958/123920536-0625fb00-d9c1-11eb-875a-91942efc2183.png">
-
-6.
-
-
-
-
-
-
