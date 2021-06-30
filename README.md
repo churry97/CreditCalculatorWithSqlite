@@ -1,4 +1,5 @@
-# forked from 
+# Credit Calculator with SQLITE
+## forked from dpcks0919
 
 1. 데이터 추가
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/63008958/123918204-99116600-d9be-11eb-8fa8-f20d14ec7fd3.png">
